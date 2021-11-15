@@ -1,12 +1,22 @@
-// chart definition
+function update_label() {
+    let inp_val = document.getElementById("myInput").value
+    var chartlbl = ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'];
+    document.getElementById("myLabel").innerHTML = chartlbl[inp_val];
+    update_chart(inp_val)
+}
+
+
+
+
 const ctx = document.getElementById('myChart').getContext('2d');
-const myChart = new Chart(ctx, {
+var data_chart = [12, 19, 3, 5, 2, 3];
+var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
         datasets: [{
             label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
+            data: data_chart,
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
@@ -34,5 +44,19 @@ const myChart = new Chart(ctx, {
         }
     }
 });
-
+// chart definition
+function update_chart(index) {
+    // let data_chart = [12, 19, 3, 5, 2, 3];
+    data_chart[index] = data_chart[index] * 2;
+    console.log(data_chart[index]);
+    myChart.data[index] = data_chart[index] * 2;
+    myChart.update();
+}
 //// end chart definition
+
+
+function update_lbl() {
+    myChart.chartlbl[index] = data_label[index]
+    myChart.update();
+
+}

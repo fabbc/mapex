@@ -7,22 +7,43 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-    </head>
+        <link rel="stylesheet" href="asset/css/slider.css">
 
-    <body>
-        <div>
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <canvas id="myChart" width="400" height="150"></canvas>
-                        <input id="myInput" type="range">
+        <body>
+            <div class="regtangle">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <canvas id="myChart" width="1020" height="400"></canvas>
+                            <div>
+                                <!-- <input id="myInput" type="range" class="form-control-range slider range blue  " min="0" max="6" step="1" value="0" onchange="return update_label();" /> -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- toggle btn -->
+                    <div class="row">
+                        <div class="col-sm">
+                        </div>
+                        <div class="col-sm">
+                            <div class="btn-group btn-group-toggle " data-toggle="buttons">
+                                <label class="btn btn-secondary active">
+                                  <input type="radio" name="options" id="option1" autocomplete="off" checked> Active
+                                </label>
+                                <label class="btn btn-secondary">
+                                  <input type="radio" name="options" id="option2" autocomplete="off"> Radio
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-sm">
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <script type="text/javascript" src="asset/js/myscripts.js">
-        </script>
-
-    </body>
+            <div class="slider_container"><input id="myInput" type="range" class="form-control-range slider range blue  " min="0" max="5" step="1" value="0" onchange="return update_label();" />
+                <label id="myLabel" class="lbl_color float-right">Red</label>
+            </div>
+            <script type="text/javascript" src="asset/js/myscripts.js">
+            </script>
+        </body>
 
 </html>
