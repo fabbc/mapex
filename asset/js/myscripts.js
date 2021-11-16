@@ -1,6 +1,6 @@
 function update_label() {
     let inp_val = document.getElementById("myInput").value
-    var chartlbl = ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'];
+    var chartlbl = ["Africa", "Asia", "Europe", "Latin America", "North America"];
     document.getElementById("myLabel").innerHTML = chartlbl[inp_val];
     update_chart(inp_val)
 }
@@ -13,9 +13,9 @@ var data_chart = [12, 19, 3, 5, 2, 3];
 var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
         datasets: [{
-            label: '# of Votes',
+            label: '# of Population (millions) ',
             data: data_chart,
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
@@ -44,13 +44,36 @@ var myChart = new Chart(ctx, {
         }
     }
 });
+
+///pie chart
+
+var myChart2 = new Chart(document.getElementById("piechart"), {
+    type: 'pie',
+    data: {
+        labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
+        datasets: [{
+            label: "Population (millions)",
+            backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850"],
+            data: data_chart,
+        }]
+    },
+    options: {
+        title: {
+            display: true,
+            text: 'Predicted world population (millions) in 2050'
+        }
+    }
+});
+
 // chart definition
 function update_chart(index) {
     // let data_chart = [12, 19, 3, 5, 2, 3];
     data_chart[index] = data_chart[index] * 2;
     console.log(data_chart[index]);
     myChart.data[index] = data_chart[index] * 2;
+    myChart2.data[index] = data_chart[index] * 2;
     myChart.update();
+    myChart2.update();
 }
 //// end chart definition
 
