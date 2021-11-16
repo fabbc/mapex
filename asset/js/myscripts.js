@@ -78,8 +78,45 @@ function update_chart(index) {
 //// end chart definition
 
 
-function update_lbl() {
-    myChart.chartlbl[index] = data_label[index]
-    myChart.update();
+////hidden element chart with toggle button///
+// var y = document.getElementById("myChart");
+// var x = document.getElementById("piechart");
 
+function toggle() {
+    let o1 = document.getElementById("option1")
+    let o2 = document.getElementById("option2")
+    let o3 = document.getElementById("option3")
+
+    let cn1 = document.getElementById("bar")
+    let cn2 = document.getElementById("pie")
+
+    let ch1 = o1.checked
+    let ch2 = o2.checked
+    let ch3 = o3.checked
+
+    if (ch1) {
+        console.log("BAR")
+        cn1.classList.value = "col d-flex justify-content-center mt-4"
+        cn2.classList.value = "col d-none justify-content-center mt-4"
+    }
+    if (ch2) {
+        console.log("PIE")
+        cn1.classList.value = "col d-none justify-content-center mt-4"
+        cn2.classList.value = "col d-flex justify-content-center mt-4"
+
+    }
+    if (ch3) {
+        console.log("BOTH")
+        cn1.classList.value = "col-6 justify-content-center mt-4"
+        cn2.classList.value = "col-6 justify-content-center mt-4"
+    }
 }
+
+// function myFunction2() {
+
+//     if (y.style.display === "none") {
+//         y.style.display = "block";
+//     } else {
+//         y.style.display = x;
+//     }
+// }
