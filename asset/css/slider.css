@@ -36,17 +36,15 @@ body {
 
 .lbl_color {
     COLOR: #ffffff;
-    margin-right: 82px;
-    margin-top: 25px;
 }
 
 .range {
     -webkit-appearance: none;
     -moz-appearance: none;
     position: absolute;
-    left: 45%;
+    left: 57%;
     top: 50%;
-    width: 1070px;
+    width: 50rem;
     margin-top: 4px;
     transform: translate(-50%, -50%);
 }
@@ -149,4 +147,17 @@ input[type=range]::-webkit-slider-thumb:active {
 
 input[type=range]::-moz-range-thumb:active {
     cursor: -moz-grabbing;
+}
+
+.gr-btn-toggle {
+    margin-left: 3rem;
+    margin-top: 1rem;
+}
+
+.gr-piechart {
+    display: block;
+    box-sizing: border-box;
+    height: 467 px;
+    width: 467 px;
+    margin-right: 20rem;
 }
