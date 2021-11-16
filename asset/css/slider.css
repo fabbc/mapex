@@ -44,7 +44,7 @@ body {
     position: absolute;
     left: 57%;
     top: 50%;
-    width: 50rem;
+    width: 45rem;
     margin-top: 4px;
     transform: translate(-50%, -50%);
 }
@@ -155,9 +155,11 @@ input[type=range]::-moz-range-thumb:active {
 }
 
 .gr-piechart {
-    display: block;
-    box-sizing: border-box;
-    height: 467 px;
-    width: 467 px;
-    margin-right: 20rem;
+    /* display: flex;
+    flex-wrap: wrap; */
+    height: 450px;
+    width: 450px;
+    /* box-sizing: border-box; */
+    /* margin-right: 20rem; */
+    /* align-content: center; */
 }

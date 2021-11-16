@@ -9,40 +9,42 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="asset/css/slider.css">
         <link rel="stylesheet" href="asset/css/fontello-embedded.css">
+        <title>MAPEx</title>
 
         <body>
             <div class="regtangle">
                 <div class="container">
                     <div class="row">
-                        <div class="col">
-                            <canvas id="myChart" width="1020" height="400"></canvas>
-                            <div>
-                                <!-- <input id="myInput" type="range" class="form-control-range slider range blue  " min="0" max="6" step="1" value="0" onchange="return update_label();" /> -->
+                        <div id="bar" class="col-6 d-flex justify-content-center mt-4">
+                            <canvas id="myChart" height="450" width="1120"></canvas>
+                        </div>
+                        <div id="pie" class="col-6 d-flex justify-content-center mt-4">
+                            <div class="gr-piechart">
+                                <canvas id="piechart" width="450" height="450"></canvas>
                             </div>
                         </div>
-                        <div class="gr-piechart">
-                            <canvas id="piechart" width="450" height="250"></canvas>
-                        </div>
                     </div>
-                    <!-- toggle btn -->
                     <div class="row ">
                         <div class="col-sm ">
                         </div>
                         <div class="col-sm ">
-
                         </div>
                         <div class="col-sm ">
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- toggle btn -->
             <div class="slider_container ">
                 <div class="btn-group btn-group-toggle gr-btn-toggle " data-toggle="buttons">
                     <label class="btn btn-secondary active "><i class="icon-chart-bar-outline "></i>
-                      <input type="radio" name="options" id="option1" autocomplete="off" checked > Bar chart
+                      <input type="radio" name="options" id="option1" autocomplete="off" onclick=" return toggle();"> Bar chart
                     </label>
                     <label class="btn btn-secondary "><i class="icon-chart-pie-outline "></i>
-                      <input type="radio" name="options" id="option2" autocomplete="off" onclick=" return myFunction();"> Pie chart
+                      <input type="radio" name="options" id="option3" autocomplete="off" onclick=" return toggle();" checked> Both
+                    </label>
+                    <label class="btn btn-secondary "><i class="icon-chart-pie-outline "></i>
+                      <input type="radio" name="options" id="option2" autocomplete="off" onclick=" return toggle();"> Pie chart
                     </label>
                 </div>
 
