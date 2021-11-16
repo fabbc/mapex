@@ -9,7 +9,7 @@ function update_label() {
 
 
 const ctx = document.getElementById('myChart').getContext('2d');
-var data_chart = [12, 19, 3, 5, 2, 3];
+var data_chart = [12, 19, 3, 5, 2];
 var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
