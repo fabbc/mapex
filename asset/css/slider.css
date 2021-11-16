@@ -1,17 +1,11 @@
 body {
     background-image: url(../img/foggy-mountainous-scenery-gloomy-sky.jpg);
-    position: absolute;
     background-repeat: no-repeat;
 }
 
 .regtangle {
-    position: absolute;
-    width: 1300px;
-    height: 500px;
     background: rgba(157, 157, 157, 0.67);
-    border-radius: 30px;
-    margin-left: 65px;
-    margin-top: 50px;
+    border-radius: 20px;
 }
 
 .slider_margin {
@@ -19,13 +13,8 @@ body {
 }
 
 .slider_container {
-    position: absolute;
-    border-radius: 30px;
+    border-radius: 15px;
     background-color: #1d1c25;
-    width: 1300px;
-    height: 70px;
-    margin-left: 65px;
-    margin-top: 580px;
 }
 
 .slider_color {
@@ -42,9 +31,8 @@ body {
     -webkit-appearance: none;
     -moz-appearance: none;
     position: absolute;
-    left: 57%;
+    left: 50%;
     top: 50%;
-    width: 45rem;
     margin-top: 4px;
     transform: translate(-50%, -50%);
 }

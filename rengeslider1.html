@@ -12,44 +12,48 @@
         <title>MAPEx</title>
 
         <body>
-            <div class="regtangle">
-                <div class="container">
-                    <div class="row">
-                        <div id="bar" class="col-6 d-flex justify-content-center mt-4">
-                            <canvas id="myChart" height="450" width="1120"></canvas>
-                        </div>
-                        <div id="pie" class="col-6 d-flex justify-content-center mt-4">
-                            <div class="gr-piechart">
-                                <canvas id="piechart" width="450" height="450"></canvas>
-                            </div>
-                        </div>
+            <div class="container regtangle mt-5">
+                <div class="row py-5">
+                    <div id="bar" class="col d-flex justify-content-center mt-4">
+                        <canvas id="myChart" height="450" width="1120"></canvas>
                     </div>
-                    <div class="row ">
-                        <div class="col-sm ">
-                        </div>
-                        <div class="col-sm ">
-                        </div>
-                        <div class="col-sm ">
+                    <div id="pie" class="col d-none justify-content-center mt-4">
+                        <div class="gr-piechart">
+                            <canvas id="piechart" width="450" height="450"></canvas>
                         </div>
                     </div>
                 </div>
             </div>
+
             <!-- toggle btn -->
-            <div class="slider_container ">
-                <div class="btn-group btn-group-toggle gr-btn-toggle " data-toggle="buttons">
-                    <label class="btn btn-secondary active "><i class="icon-chart-bar-outline "></i>
-                      <input type="radio" name="options" id="option1" autocomplete="off" onclick=" return toggle();"> Bar chart
-                    </label>
-                    <label class="btn btn-secondary "><i class="icon-chart-pie-outline "></i>
-                      <input type="radio" name="options" id="option3" autocomplete="off" onclick=" return toggle();" checked> Both
-                    </label>
-                    <label class="btn btn-secondary "><i class="icon-chart-pie-outline "></i>
-                      <input type="radio" name="options" id="option2" autocomplete="off" onclick=" return toggle();"> Pie chart
-                    </label>
+            <div class="container p-0">
+                <div class="row no-gutters slider_container my-2">
+                    <div class="col">
+                        <div class="row mt-2 mb-3 ml-2">
+                            <div class="col-lg-3 col-md-12 d-flex justify-content-center align-content-center">
+                                <div class="btn-group btn-group-toggle my-3" data-toggle="buttons">
+                                    <label class="btn btn-secondary active "><i class="icon-chart-bar-outline "></i>
+                                      <input type="radio" name="options" id="option1" autocomplete="off" onclick=" return toggle();" checked > Bar chart
+                                    </label>
+                                    <!-- <label class="btn btn-secondary "><i class="icon-chart-pie-outline "></i>
+                                      <input type="radio" name="options" id="option3" autocomplete="off" onclick=" return toggle();" checked> Both
+                                    </label> -->
+                                    <label class="btn btn-secondary"><i class="icon-chart-pie-outline "></i>
+                                      <input type="radio" name="options" id="option2" autocomplete="off" onclick=" return toggle();"  > Pie chart
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 col-md-10 d-flex justify-content-center align-content-center">
+                                <input id="myInput" type="range" class="form-control-range slider range blue" min="0" max="4" step="1" value="0" onchange="return update_label();" />
+                            </div>
+                            <div class="col-lg-2 col-md-2 d-flex justify-content-center align-content-center">
+                                <label id="myLabel" class="lbl_color mr-5 mt-4 float-right">Africa</label>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
 
-                <input id="myInput" type="range" class="form-control-range slider range blue" min="0" max="4" step="1" value="0" onchange="return update_label();" />
-                <label id="myLabel" class="lbl_color mr-5 mt-4 float-right">Africa</label>
             </div>
             <script type="text/javascript " src="asset/js/myscripts.js ">
             </script>

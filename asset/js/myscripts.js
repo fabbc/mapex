@@ -85,14 +85,14 @@ function update_chart(index) {
 function toggle() {
     let o1 = document.getElementById("option1")
     let o2 = document.getElementById("option2")
-    let o3 = document.getElementById("option3")
+        // let o3 = document.getElementById("option3")
 
     let cn1 = document.getElementById("bar")
     let cn2 = document.getElementById("pie")
 
     let ch1 = o1.checked
     let ch2 = o2.checked
-    let ch3 = o3.checked
+        // let ch3 = o3.checked
 
     if (ch1) {
         console.log("BAR")
@@ -105,11 +105,11 @@ function toggle() {
         cn2.classList.value = "col d-flex justify-content-center mt-4"
 
     }
-    if (ch3) {
-        console.log("BOTH")
-        cn1.classList.value = "col-6 justify-content-center mt-4"
-        cn2.classList.value = "col-6 justify-content-center mt-4"
-    }
+    // if (ch3) {
+    //     console.log("BOTH")
+    //     cn1.classList.value = "col-6 justify-content-center mt-4"
+    //     cn2.classList.value = "col-6 justify-content-center mt-4"
+    // }
 }
 
 // function myFunction2() {
