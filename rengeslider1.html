@@ -25,12 +25,12 @@
                 </div>
             </div>
 
-            <!-- toggle btn -->
             <div class="container p-0">
                 <div class="row no-gutters slider_container my-2">
                     <div class="col">
                         <div class="row mt-2 mb-3 ml-2">
                             <div class="col-lg-3 col-md-12 d-flex justify-content-center align-content-center">
+                                <!-- toggle btn -->
                                 <div class="btn-group btn-group-toggle my-3" data-toggle="buttons">
                                     <label class="btn btn-secondary active "><i class="icon-chart-bar-outline "></i>
                                       <input type="radio" name="options" id="option1" autocomplete="off" onclick=" return toggle();" checked > Bar chart
@@ -42,6 +42,7 @@
                                       <input type="radio" name="options" id="option2" autocomplete="off" onclick=" return toggle();"  > Pie chart
                                     </label>
                                 </div>
+                                <!-- end toggle btn -->
                             </div>
                             <div class="col-lg-7 col-md-10 d-flex justify-content-center align-content-center">
                                 <input id="myInput" type="range" class="form-control-range slider range blue" min="0" max="4" step="1" value="0" onchange="return update_label();" />

@@ -18,12 +18,12 @@ var myChart = new Chart(ctx, {
             label: '# of Population (millions) ',
             data: data_chart,
             backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
+                'rgba(255, 99, 132, 0.5)',
+                'rgba(54, 162, 235, 0.5)',
+                'rgba(255, 206, 86, 0.5)',
+                'rgba(75, 192, 192, 0.5)',
+                'rgba(153, 102, 255, 0.5)',
+                'rgba(255, 159, 64, 0.5)'
             ],
             borderColor: [
                 'rgba(255, 99, 132, 1)',
@@ -53,8 +53,24 @@ var myChart2 = new Chart(document.getElementById("piechart"), {
         labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
         datasets: [{
             label: "Population (millions)",
-            backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850"],
             data: data_chart,
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.5)',
+                'rgba(54, 162, 235, 0.5)',
+                'rgba(255, 206, 86, 0.5)',
+                'rgba(75, 192, 192, 0.5)',
+                'rgba(153, 102, 255, 0.5)',
+                'rgba(255, 159, 64, 0.5)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
         }]
     },
     options: {
@@ -79,8 +95,6 @@ function update_chart(index) {
 
 
 ////hidden element chart with toggle button///
-// var y = document.getElementById("myChart");
-// var x = document.getElementById("piechart");
 
 function toggle() {
     let o1 = document.getElementById("option1")
@@ -111,12 +125,3 @@ function toggle() {
     //     cn2.classList.value = "col-6 justify-content-center mt-4"
     // }
 }
-
-// function myFunction2() {
-
-//     if (y.style.display === "none") {
-//         y.style.display = "block";
-//     } else {
-//         y.style.display = x;
-//     }
-// }
