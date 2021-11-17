@@ -153,7 +153,8 @@ input[type=range]::-moz-range-thumb:active {
     /* align-content: center; */
 }
 
-* {
+
+/* * {
     margin: 0;
     padding: 0;
 }
@@ -170,10 +171,8 @@ li {
 
 a {
     text-decoration:
-}
+} 
 
-
-/* 
 .body {
     background-color: #fdd9cc;
 }
